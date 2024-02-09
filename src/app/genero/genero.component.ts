@@ -8,12 +8,16 @@ import { PeliculasService } from '../servicios/peliculas.service';
   styleUrl: './genero.component.css'
 })
 export class GeneroComponent {
+  genero:any;
 constructor(private peli:PeliculasService){}
 ngOnInit(){
   this.cargargenero();
 }
 cargargenero(){
   this.peli.getgenero().subscribe({next:(dt:any)=>{
+    this.genero=dt.genres;
+       debugger
+    
   },
   error:(e)=>{
     debugger

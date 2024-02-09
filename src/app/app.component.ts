@@ -2,11 +2,12 @@ import { DatosComponent } from './datos/datos.component';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { GeneroComponent } from './genero/genero.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterLink],
+  imports: [RouterOutlet,RouterLink,GeneroComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
